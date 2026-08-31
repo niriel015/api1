@@ -23,7 +23,7 @@ local MyLibrary = {
 		["Color Stroke"] = Color3.fromRGB(180, 90, 140),    -- Borda moderna
 		["Color Theme"] = Color3.fromRGB(60, 20, 40),       -- Inputs / botões
 		["Color Text"] = Color3.fromRGB(255, 240, 245),     -- Branco rosado suave
-		["Color Dark Text"] = Color3.fromRGB(200, 140, 170) -- Texto secundário
+		["Color Lola Text"] = Color3.fromRGB(200, 140, 170) -- Texto secundário
 	},
 },
 	Info = {
@@ -1241,7 +1241,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 	
 	local DescL = InsertTheme(Create("TextLabel", {
 		Font = Enum.Font.Gotham,
-		TextColor3 = Theme["Color Dark Text"],
+		TextColor3 = Theme["Color Lola Text"],
 		Size = UDim2.new(1, -20),
 		AutomaticSize = "Y",
 		Position = UDim2.new(0, 12, 0, 15),
@@ -1251,7 +1251,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 		TextXAlignment = "Left",
 		Text = "",
 		RichText = true
-	}), "DarkText")
+	}), "LolaText")
 
 	local Frame = Make("Button", Instance, {
 		Size = UDim2.new(1, 0, 0, 25),
@@ -1358,8 +1358,8 @@ function MyLibrary:SetTheme(NewTheme)
 			Val.Instance[GetColor(Val.Instance)] = Theme["Color Theme"]
 		elseif Val.Type == "Text" then
 			Val.Instance[GetColor(Val.Instance)] = Theme["Color Text"]
-		elseif Val.Type == "DarkText" then
-			Val.Instance[GetColor(Val.Instance)] = Theme["Color Dark Text"]
+		elseif Val.Type == "LolaText" then
+			Val.Instance[GetColor(Val.Instance)] = Theme["Color Lola Text"]
 		elseif Val.Type == "ScrollBar" then
 			Val.Instance[GetColor(Val.Instance)] = Theme["Color Theme"]
 		end
@@ -1438,14 +1438,14 @@ function MyLibrary:MakeWindow(Configs)
 			AnchorPoint = Vector2.new(0, 1),
 			Position = UDim2.new(1, 5, 0.9),
 			Text = WMiniText,
-			TextColor3 = Theme["Color Dark Text"],
+			TextColor3 = Theme["Color Lola Text"],
 			BackgroundTransparency = 1,
 			TextXAlignment = "Left",
 			TextYAlignment = "Bottom",
 			TextSize = 9,
 			Font = Enum.Font.Gotham,
 			Name = "SubTitle"
-		}), "DarkText")
+		}), "LolaText")
 	}), "Text")
 	
 	local MainScroll = InsertTheme(Create("ScrollingFrame", Components, {
@@ -1655,12 +1655,12 @@ end
 				AutomaticSize = "Y",
 				Text = DText,
 				TextXAlignment = "Left",
-				TextColor3 = Theme["Color Dark Text"],
+				TextColor3 = Theme["Color Lola Text"],
 				TextSize = 12,
 				Position = UDim2.fromOffset(15, 25),
 				BackgroundTransparency = 1,
 				TextWrapped = true
-			}), "DarkText")
+			}), "LolaText")
 		})Make("Gradient", Frame, {Rotation = 270})Make("Corner", Frame)
 		
 		local ButtonsHolder = Create("Frame", Frame, {
@@ -2625,12 +2625,12 @@ end
 				TextWrapped = "Y",
 				AutomaticSize = "Y",
 				Font = Enum.Font.Gotham,
-				TextColor3 = Theme["Color Dark Text"],
+				TextColor3 = Theme["Color Lola Text"],
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
 				TextSize = 8,
 				Text = Desc
-			}), "DarkText")
+			}), "LolaText")
 			
 			local JoinButton = Create("TextButton", FrameHolder, {
 				Size = UDim2.new(1, -14, 0, 16),
