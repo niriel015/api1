@@ -9,23 +9,23 @@ local Player = Players.LocalPlayer
 local PlayerMouse = Player:GetMouse()
 
 local MyLibrary = {
-	Themes = {
-	Main = {
-		["Color Hub 1"] = ColorSequence.new({
-			ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 5, 10)),        -- Rosa escuro profundo
-			ColorSequenceKeypoint.new(0.20, Color3.fromRGB(40, 10, 25)),       -- Sombra rosada
-			ColorSequenceKeypoint.new(0.45, Color3.fromRGB(70, 20, 45)),       -- Rosa elegante
-			ColorSequenceKeypoint.new(0.70, Color3.fromRGB(120, 40, 80)),      -- Destaque suave
-			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(180, 80, 130))      -- Luz rosada
-		}),
+    Themes = {
+        Main = {
+            ["Color Hub 1"] = ColorSequence.new({
+                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(5, 15, 20)),        -- Ciano escuro profundo
+                ColorSequenceKeypoint.new(0.20, Color3.fromRGB(10, 30, 40)),       -- Sombra ciano
+                ColorSequenceKeypoint.new(0.45, Color3.fromRGB(20, 55, 70)),       -- Ciano elegante
+                ColorSequenceKeypoint.new(0.70, Color3.fromRGB(40, 100, 120)),     -- Destaque suave
+                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 160, 180))      -- Luz ciano
+            }),
 
-		["Color Hub 2"] = Color3.fromRGB(25, 10, 20),       -- Fundo principal
-		["Color Stroke"] = Color3.fromRGB(180, 90, 140),    -- Borda moderna
-		["Color Theme"] = Color3.fromRGB(60, 20, 40),       -- Inputs / botões
-		["Color Text"] = Color3.fromRGB(255, 240, 245),     -- Branco rosado suave
-		["Color Lola Text"] = Color3.fromRGB(200, 140, 170) -- Texto secundário
-	},
-},
+            ["Color Hub 2"] = Color3.fromRGB(10, 20, 25),       -- Fundo principal
+            ["Color Stroke"] = Color3.fromRGB(90, 160, 180),    -- Borda moderna
+            ["Color Theme"] = Color3.fromRGB(20, 50, 60),       -- Inputs / botões
+            ["Color Text"] = Color3.fromRGB(240, 250, 255),     -- Branco ciano suave
+            ["Color Lola Text"] = Color3.fromRGB(140, 185, 200) -- Texto secundário
+        },
+}
 	Info = {
 		Version = "1.1.0"
 	},
