@@ -9,23 +9,23 @@ local Player = Players.LocalPlayer
 local PlayerMouse = Player:GetMouse()
 
 local MyLibrary = {
-    Themes = {
-        Main = {
-            ["Color Hub 1"] = ColorSequence.new({
-                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(5, 15, 20)),        -- Ciano escuro profundo
-                ColorSequenceKeypoint.new(0.20, Color3.fromRGB(10, 30, 40)),       -- Sombra ciano
-                ColorSequenceKeypoint.new(0.45, Color3.fromRGB(20, 55, 70)),       -- Ciano elegante
-                ColorSequenceKeypoint.new(0.70, Color3.fromRGB(40, 100, 120)),     -- Destaque suave
-                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(80, 160, 180))      -- Luz ciano
-            }),
+	Themes = {
+	Main = {
+		["Color Hub 1"] = ColorSequence.new({
+			ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 5, 10)),        -- Rosa escuro profundo
+			ColorSequenceKeypoint.new(0.20, Color3.fromRGB(40, 10, 25)),       -- Sombra rosada
+			ColorSequenceKeypoint.new(0.45, Color3.fromRGB(70, 20, 45)),       -- Rosa elegante
+			ColorSequenceKeypoint.new(0.70, Color3.fromRGB(120, 40, 80)),      -- Destaque suave
+			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(180, 80, 130))      -- Luz rosada
+		}),
 
-            ["Color Hub 2"] = Color3.fromRGB(10, 20, 25),       -- Fundo principal
-            ["Color Stroke"] = Color3.fromRGB(90, 160, 180),    -- Borda moderna
-            ["Color Theme"] = Color3.fromRGB(20, 50, 60),       -- Inputs / botões
-            ["Color Text"] = Color3.fromRGB(240, 250, 255),     -- Branco ciano suave
-            ["Color Lola Text"] = Color3.fromRGB(140, 185, 200) -- Texto secundário
-        },
-}
+		["Color Hub 2"] = Color3.fromRGB(25, 10, 20),       -- Fundo principal
+		["Color Stroke"] = Color3.fromRGB(180, 90, 140),    -- Borda moderna
+		["Color Theme"] = Color3.fromRGB(60, 20, 40),       -- Inputs / botões
+		["Color Text"] = Color3.fromRGB(255, 240, 245),     -- Branco rosado suave
+		["Color Dark Text"] = Color3.fromRGB(200, 140, 170) -- Texto secundário
+	},
+},
 	Info = {
 		Version = "1.1.0"
 	},
@@ -1241,7 +1241,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 	
 	local DescL = InsertTheme(Create("TextLabel", {
 		Font = Enum.Font.Gotham,
-		TextColor3 = Theme["Color Lola Text"],
+		TextColor3 = Theme["Color Dark Text"],
 		Size = UDim2.new(1, -20),
 		AutomaticSize = "Y",
 		Position = UDim2.new(0, 12, 0, 15),
@@ -1251,7 +1251,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 		TextXAlignment = "Left",
 		Text = "",
 		RichText = true
-	}), "LolaText")
+	}), "DarkText")
 
 	local Frame = Make("Button", Instance, {
 		Size = UDim2.new(1, 0, 0, 25),
@@ -1358,8 +1358,8 @@ function MyLibrary:SetTheme(NewTheme)
 			Val.Instance[GetColor(Val.Instance)] = Theme["Color Theme"]
 		elseif Val.Type == "Text" then
 			Val.Instance[GetColor(Val.Instance)] = Theme["Color Text"]
-		elseif Val.Type == "LolaText" then
-			Val.Instance[GetColor(Val.Instance)] = Theme["Color Lola Text"]
+		elseif Val.Type == "DarkText" then
+			Val.Instance[GetColor(Val.Instance)] = Theme["Color Dark Text"]
 		elseif Val.Type == "ScrollBar" then
 			Val.Instance[GetColor(Val.Instance)] = Theme["Color Theme"]
 		end
@@ -1438,14 +1438,14 @@ function MyLibrary:MakeWindow(Configs)
 			AnchorPoint = Vector2.new(0, 1),
 			Position = UDim2.new(1, 5, 0.9),
 			Text = WMiniText,
-			TextColor3 = Theme["Color Lola Text"],
+			TextColor3 = Theme["Color Dark Text"],
 			BackgroundTransparency = 1,
 			TextXAlignment = "Left",
 			TextYAlignment = "Bottom",
 			TextSize = 9,
 			Font = Enum.Font.Gotham,
 			Name = "SubTitle"
-		}), "LolaText")
+		}), "DarkText")
 	}), "Text")
 	
 	local MainScroll = InsertTheme(Create("ScrollingFrame", Components, {
@@ -1655,12 +1655,12 @@ end
 				AutomaticSize = "Y",
 				Text = DText,
 				TextXAlignment = "Left",
-				TextColor3 = Theme["Color Lola Text"],
+				TextColor3 = Theme["Color Dark Text"],
 				TextSize = 12,
 				Position = UDim2.fromOffset(15, 25),
 				BackgroundTransparency = 1,
 				TextWrapped = true
-			}), "LolaText")
+			}), "DarkText")
 		})Make("Gradient", Frame, {Rotation = 270})Make("Corner", Frame)
 		
 		local ButtonsHolder = Create("Frame", Frame, {
@@ -2625,12 +2625,12 @@ end
 				TextWrapped = "Y",
 				AutomaticSize = "Y",
 				Font = Enum.Font.Gotham,
-				TextColor3 = Theme["Color Lola Text"],
+				TextColor3 = Theme["Color Dark Text"],
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
 				TextSize = 8,
 				Text = Desc
-			}), "LolaText")
+			}), "DarkText")
 			
 			local JoinButton = Create("TextButton", FrameHolder, {
 				Size = UDim2.new(1, -14, 0, 16),
