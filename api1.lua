@@ -12,16 +12,16 @@ local MyLibrary = {
 	Themes = {
 	Main = {
 		["Color Hub 1"] = ColorSequence.new({
-			ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 5, 10)),        -- Rosa escuro profundo
-			ColorSequenceKeypoint.new(0.20, Color3.fromRGB(40, 10, 25)),       -- Sombra rosada
-			ColorSequenceKeypoint.new(0.45, Color3.fromRGB(70, 20, 45)),       -- Rosa elegante
-			ColorSequenceKeypoint.new(0.70, Color3.fromRGB(120, 40, 80)),      -- Destaque suave
+			ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 210, 255)),        -- Rosa escuro profundo
+			ColorSequenceKeypoint.new(0.20, Color3.fromRGB(0, 150, 200)),       -- Sombra rosada
+			ColorSequenceKeypoint.new(0.45, Color3.fromRGB(240, 250, 255)),       -- Rosa elegante
+			ColorSequenceKeypoint.new(0.70, Color3.fromRGB(130, 170, 190)),      -- Destaque suave
 			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(180, 80, 130))      -- Luz rosada
-		}),
+		}),..
 
-		["Color Hub 2"] = Color3.fromRGB(25, 10, 20),       -- Fundo principal
-		["Color Stroke"] = Color3.fromRGB(180, 90, 140),    -- Borda moderna
-		["Color Theme"] = Color3.fromRGB(60, 20, 40),       -- Inputs / botões
+		["Color Hub 2"] = Color3.fromRGB(10, 18, 26),       -- Fundo principal
+		["Color Stroke"] = Color3.fromRGB(15, 28, 40),    -- Borda moderna
+		["Color Theme"] = Color3.fromRGB(20, 38, 52),       -- Inputs / botões
 		["Color Text"] = Color3.fromRGB(255, 240, 245),     -- Branco rosado suave
 		["Color Dark Text"] = Color3.fromRGB(200, 140, 170) -- Texto secundário
 	},
